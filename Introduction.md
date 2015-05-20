@@ -84,3 +84,27 @@ IN	          To specify multiple possible values for a column
 AND           AND
 OR            OR
 ```
+##ORDER
+###選擇特定Column為參考 依字母排序row 並呈現資料
+```
+SELECT * FROM Customers
+ORDER BY Country;
+```
+印出 以country為基準 依字母所排序 之 所有row 內 的資料 (預設為升冪排序a~z)
+
+```
+SELECT * FROM Customers
+ORDER BY Country DESC;
+```
+印出 以country為基準 依字母所排序 之 所有row 內 的資料 (降冪排序z~a)
+DESC 指降冪 DESCENDING
+
+- 綜合應用
+```
+SELECT * FROM Customers
+ORDER BY Country ASC, CustomerName DESC;
+```
+印出 以country為基準 依字母升冪排序 之 所有row 內 的資料
+同時在country為相同資料時，以customerName為基準 依字母降冪排序 之 所有row內 的資料
+
+#INSERT INTO
