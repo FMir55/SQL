@@ -108,3 +108,35 @@ ORDER BY Country ASC, CustomerName DESC;
 同時在country為相同資料時，以customerName為基準 依字母降冪排序 之 所有row內 的資料
 
 #INSERT INTO
+append 一行 row 的資料
+```
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal','Tom B. Erichsen','Skagen 21','Stavanger','4006','Norway');
+```
+
+#UPDATE
+更新/更改特定 row 中的 特定column 資料
+```
+UPDATE Customers
+SET ContactName='Alfred Schmidt', City='Hamburg'
+WHERE CustomerName='Alfreds Futterkiste';
+```
+
+若WHERE被省略 如下
+```
+UPDATE Customers
+SET ContactName='Alfred Schmidt', City='Hamburg';
+```
+則未指定ROW 視同所有ROW中的 特定COLUMN 均改變資料
+
+#DELETE
+刪除符合條件的ROW 內所資料 
+```
+DELETE FROM Customers
+WHERE CustomerName='Alfreds Futterkiste' AND ContactName='Maria Anders';
+```
+
+清空所有TABLE內資料
+```
+DELETE * FROM table_name;
+```
